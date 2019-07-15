@@ -16,6 +16,7 @@ export class HomePage {
    
     //let res = await<any> this.http.get('https://randomuser.me/api/?results=50').toPromise();
     console.log(a,b);
+    let url = "https://github.com/devilvergil/ioniccalapp.git"
     //this.cal = res.results;
   
   }
