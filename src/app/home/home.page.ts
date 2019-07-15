@@ -14,11 +14,13 @@ export class HomePage {
 
   async calculate(a,b){
    
-    let url = "https://nextflow-node-calculator-api.azurewebsites.net/"
-    let res = await<any> this.http.post('url',{}).toPromise();
-    console.log(a,b);
+    let url = "https://nextflow-node-calculator-api.azurewebsites.net/calculator/plus"
+    let res = await<any> this.http.post(url,{ "first" : a, "second": b }).toPromise();
+    console.log(res);
+
+    //cal = res.result;
     
-    //this.cal = res.results;
+    this.cal = res;
   
     
   }
