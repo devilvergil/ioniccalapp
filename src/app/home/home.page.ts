@@ -14,11 +14,13 @@ export class HomePage {
 
   async calculate(a,b){
    
-    //let res = await<any> this.http.get('https://randomuser.me/api/?results=50').toPromise();
+    let url = "https://nextflow-node-calculator-api.azurewebsites.net/"
+    let res = await<any> this.http.post('url',{}).toPromise();
     console.log(a,b);
-    let url = "https://github.com/devilvergil/ioniccalapp.git"
+    
     //this.cal = res.results;
   
+    
   }
 
 }
