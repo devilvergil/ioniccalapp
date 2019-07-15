@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { IonicNativePlugin } from '@ionic-native/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private http:HttpClient) {}
+  cal = [];
+
+  async calculate(a,b){
+   
+    //let res = await<any> this.http.get('https://randomuser.me/api/?results=50').toPromise();
+    console.log(a,b);
+    //this.cal = res.results;
+  
+  }
 
 }
