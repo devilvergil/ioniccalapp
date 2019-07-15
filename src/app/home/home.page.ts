@@ -10,12 +10,13 @@ import { IonicNativePlugin } from '@ionic-native/core';
 export class HomePage {
 
   constructor(private http:HttpClient) {}
+  public frmdata = {};
   cal = [];
 
   async calculate(a,b){
    
     let url = "https://nextflow-node-calculator-api.azurewebsites.net/calculator/plus"
-    let res = await<any> this.http.post(url,{ "first" : a, "second": b }).toPromise();
+    let res = await<any> this.http.post(url,this.frmdata).toPromise();
     console.log(res);
 
     //cal = res.result;
